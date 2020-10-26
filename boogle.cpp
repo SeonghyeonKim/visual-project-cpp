@@ -17,7 +17,7 @@ using namespace std;
 const int dx[]={-1,-1,-1,1,1,1,0,0};
 const int dy[]={-1,0,1,-1,0,1,-1,1};
 string word;
-char board[5][5];
+char board[5][5]={{'a','a','a','a','a'},{'b','b','b','b','b'},{'c','c','c','c','c'},{'d','d','d','d','d'},{'e','e','e','e','e'}};
 bool record[5][5][10];
 
 bool hasWord(int, int, int);
@@ -28,9 +28,9 @@ void checkWord(void);
 int main(void) {
     cin.tie(NULL);
     ios_base::sync_with_stdio(false);
-    cout << "=====================================================\n"
+    cout << "=====================================================\n";
     cout << "==================== B O O G L E ====================\n";
-    cout << "=====================================================\n"
+    cout << "=====================================================\n";
     while(1) {
         int mode;
         cout << "\n1. Show board\t2. Make board\t3. Check word\t 4. quit\n";
@@ -95,7 +95,7 @@ void checkWord(void) {
                 }
             }
         }
-        cout << "Input Word (max lenght = 10) : "
+        cout << "Input Word (max lenght = 10) : ";
         cin >> word;
         bool result=false;
         for(int j=0; j<5; j++) {
